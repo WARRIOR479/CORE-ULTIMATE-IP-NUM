@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORE ULTIMATE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>CORE ULTIMATE</h1>
+        <p>Advanced Intelligence Toolkit</p>
+    </div>
+
+    <div class="grid">
+
+        <!-- IP SECTION -->
+        <div class="card">
+            <h2>🌐 IP Intelligence</h2>
+
+            <form method="POST">
+                <input type="text" name="ip" placeholder="Enter IP Address">
+                <button type="submit">Analyze IP</button>
+            </form>
+
+            {% if ip_data %}
+            <div class="results">
+                {% for key, value in ip_data.items() %}
+                <div class="result-box">
+                    <span>{{ key }}</span>
+                    <strong>{{ value }}</strong>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+
+        <!-- PHONE SECTION -->
+        <div class="card">
+            <h2>📱 Number Intelligence</h2>
+
+            <form method="POST">
+                <input type="text" name="phone" placeholder="Enter Phone Number">
+                <button type="submit">Analyze Number</button>
+            </form>
+
+            {% if phone_data %}
+            <div class="results">
+                {% for key, value in phone_data.items() %}
+                <div class="result-box">
+                    <span>{{ key }}</span>
+                    <strong>{{ value }}</strong>
+                </div>
+                {% endfor %}
+            </div>
+            </div>
+            {% endif %}
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
