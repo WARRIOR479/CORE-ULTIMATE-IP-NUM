@@ -1,0 +1,16 @@
+{
+  "name": "CORE ULTIMATE",
+  "short_name": "CORE",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "description": "IP and Phone Info Tool",
+  "icons": [
+    {
+      "src": "/static/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
